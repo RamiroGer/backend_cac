@@ -1,0 +1,33 @@
+API: es local, se encuentra en la carpeta json y el archivos es datros.json
+
+Vue: Index.html línea 28 Index.js línea 2
+
+Fetch: Index.js línea 13
+
+Página responsiva: index.html
+
+Formulario: login.html validado con validar.js
+            reserva.html (Su select se forma leyendo desde el jsaon 
+            y la opción por defecto se lee desde las tarjetas del index.html
+            enviándolas en los atributos de la url y leyénbdolos en el reserva.js)
+
+
+Animación: HeaderFooter.js líneas 4 y 5
+Transición: estilos.css línea 113 
+Transformación: estilos.css línea 118
+
+Flex: estilas.css líneas 21, 73 y 102
+
+Los header y footer de todos los html son insertados con el HeaderFooter.js
+
+Graciela Marta Garcia 
+DNI 13.764.256
+
+Ceferino Maximo Muñoz
+DNI 24.193.849
+
+Alba Gregoria Marte Nolasco 
+DNI 95.135.543
+
+Ramiro German Meza Kozak
+DNI 44.570.400  

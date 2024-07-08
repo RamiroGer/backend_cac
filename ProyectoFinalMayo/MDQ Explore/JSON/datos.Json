@@ -1,0 +1,101 @@
+[
+    {
+        "id":"0",
+        "Nombre": "Escollera sur",
+        "Días": "Lunes, Miercoles y Viernes",
+        "Horario": "09:00 y 15:00 hs.",
+        "Precio": 2000,
+        "maps": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12475.69690355761!2d-58.69931560793499!3d-38.58159272764816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1715274075853!5m2!1ses!2sar",
+        "info": "La Escollera Sur de 2750 mtrs, junto con la Escollera Norte de 1050 mtrs, delimitan y encierran el puerto artificial de Mar del Plata-Los trabajos para construirlas comenzaron en 1913 y estan formadas por grandes bloques de cemento-En el extremo de la Sur se encuentra la estatua de San Salvador,patrono de los pescadores-Desde ellas se puede pescar y en su recorrido encontramos la reserva de los lobos marinos",
+        "gps": "-38.038949,-57.518582",
+        "foto": "..//img/escollera-sur-del-puerto-de-mar-del-plata-1-1024x696.jpg"
+    },
+    {
+        "id":"1",
+        "Nombre": "Gruta de Lourdes",
+        "Días": "Martes, Jueves y Sábados",
+        "Horario": "09:00 y 15:00 hs.",
+        "Precio": 2500,
+        "maps": "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12568.625261157957!2d-57.560802851515966!3d-38.03658971614849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgruta%20de%20lourdes%20mar%20del%20plata!5e0!3m2!1ses!2sar!4v1715274644584!5m2!1ses!2sar",
+        "info": "Capilla que esta ubicada en una loma del puerto es un espacio de recogimiento y paz y tiene ademas, un pesebre automatizado",
+        "gps": "-38.038569,-57.553892",
+        "foto": "..//img/gruta lourdes.jpg"
+    },
+    {
+        "id":"2",
+        "Nombre": "Laguna de los padres",
+        "Días": "Lunes, Miercoles y Viernes",
+        "Horario": "11:00 y 17:00 hs.",
+        "Precio": 2300,
+        "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71168.97701736016!2d-57.73306140573326!3d-37.97120251659927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x958528d47cdd0aa7%3A0xe96eb3164005e737!2sLaguna%20de%20los%20Padres!5e0!3m2!1ses!2sar!4v1715275025427!5m2!1ses!2sar",
+        "info": "Mar del Plata está situada sobre las últimas estribaciones del sistema serrano de Tandilia, antes de perderse éstos bajo el mar.Estas sierras se levantan en medio de campos cultivados, salpicados de arboledas añosas,paisajes de terrenos quebrados, lagunas y arroyos y te permitiran disfrutar de un dia en contacto con la naturaleza y actividades nauticas con todos los servicios necesarios",
+        "gps": "-37.935452,-57.721238",
+        "foto": "..//img/laguna de los padres.jpg"
+    },
+    {
+        "id":"3",
+        "Nombre": "Parque acuático",
+        "Días": "Martes, Jueves y Sábados",
+        "Horario": "11:00 y 17:00 hs.",
+        "Precio": 1700,
+        "maps": "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d169373.24029280216!2d-57.69517173521801!3d-37.92585561194821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sparque%20acuatico%20mar%20del%20plata!5e0!3m2!1ses!2sar!4v1715275163989!5m2!1ses!2sar",
+        "info": "Parque acuatico, con toboganes de hasta 25 mtrs de altura, pasando por un simulador para surfear a 70 kmts por hora, hasta experimentar una caida libre en capsulas.Toda una opcion para disfrutar en familia con servicio de reposeras, sombrillas y canchas de futball, padel y parrillas-",
+        "gps": "-37.823268,-57.622715",
+        "foto": "..//img//parque acuático.jpg"
+    },
+    {
+        "id":"4",
+        "Nombre": "Rambla",
+        "Días": "Lunes, Miercoles y Viernes",
+        "Horario": "09:00 y 15:00 hs.",
+        "Precio": 3400,
+        "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5845.8051766347235!2d-57.54460464591679!3d-38.00412688338756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dc179b4b4e85%3A0x19e8b0f0dae1895f!2sMonumento%20Hist%C3%B3rico%20Nacional%20Lobos%20Marinos!5e0!3m2!1ses!2sar!4v1715275425132!5m2!1ses!2sar",
+        "info": "La Rambla Mar del Plata y las esculturas de los lobos marinos son distintivos de la ciudad- Las esculturas estan realizadas en la piedra local, llamada tambien, piedra Mar del Plata-Al fondo, el Casino Central y el Hotel Provincial, realizados por el arquitecto Bustillo. ",
+        "gps": "-38.004948,-57.541086",
+        "foto": "..//img/rambla.jpeg"
+    },
+    {
+        "id":"5",
+        "Nombre": "Torre tanque",
+        "Días": "Martes, Jueves y Sábados",
+        "Horario": "09:00 y 15:00 hs.",
+        "Precio": 5200,
+        "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.4722537304174!2d-57.53571275790093!3d-38.01276850114097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dc3995935d71%3A0x7e7a4416b1a98d6f!2sTorre%20Tanque!5e0!3m2!1ses!2sar!4v1715275513899!5m2!1ses!2sar",
+        "info": "La Torre Tanque fue inagurada en 1943 y es el reservorio de agua que abastece a la parte alta de la ciudad-El edificio es de estilo Tudor y esta construido sobre el punto mas alto de la loma de Stella Maris-Cuenta con un ascensor por el que se accede al mirador terraza desde donde se puede apreciar una vista inigualable de la ciudad",
+        "gps": "-38.013149,-57.535314",
+        "foto": "..//img/torre tanque.jpg"
+    },
+    {
+        "id":"6",
+        "Nombre": "Puerto",
+        "Días": "Lunes, Miercoles y Viernes",
+        "Horario": "09:00 y 15:00 hs.",
+        "Precio": 2100,
+        "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12568.160264586515!2d-57.550462994400384!3d-38.046152762716986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584ddf29129483b%3A0x4d4bf245aff78945!2sPuerto%20de%20Mar%20del%20Plata!5e0!3m2!1ses!2sar!4v1715275590155!5m2!1ses!2sar",
+        "info": "El puerto y su gente son emblemáticos de Mar del Plata, así como los lobos marinos, las gaviotas, las lanchas pesqueras, las redes, las nasas y los exquisitos platos marineros que podras disfrutar en este lugar.Constituye, entonces, uno de los paseos obligados de quien visita la ciudad.",
+        "gps": "-38.050412,-57.538423",
+        "foto": "..//img/puerto.jpg"
+    },
+    {
+        "id":"7",
+        "Nombre": "Villa Victoria Ocampo",
+        "Días": "Lunes, Miercoles, Viernes",
+        "Horario": "12:00 y 17:00 hs.",
+        "Precio": 2600,
+        "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21145.636615844596!2d-57.56202488164468!3d-38.016372591070585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584de9d64ad3aa1%3A0xe8cfffbf3ea03ce3!2sCentro%20Cultural%20Victoria%20Ocampo%20(Villa%20Victoria)!5e0!3m2!1ses!2sar!4v1715275671864!5m2!1ses!2sar",
+        "info": "La Villa Victoria Ocampo fue construida como residencia de vacaciones en 1912 y fue donada a la UNESCO por la escritora  Victoria Ocampo en 1973- Luego, fue adquirida por la Municipalidad y actualmente funciona como centro cultural y cuenta con una bonita cafeteria en sus jardines",
+        "gps": "-38.019825,-57.552883",
+        "foto": "..//img/VillaVictoriaOcampo.jpg"
+    },
+    {
+        "id":"8",
+        "Nombre": "Casa puente",
+        "Días": "Martes, Jueves y Sábados",
+        "Horario": "12:00 y 17:00 hs.",
+        "Precio": 3000,
+        "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.675688293224!2d-57.575804135424896!3d-38.00802442743125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dfbf5b633b73%3A0x9603db2aa918138c!2sCASA%20SOBRE%20EL%20ARROYO%20Museo%20Casa%20del%20Puente!5e0!3m2!1ses!2sar!4v1715627047134!5m2!1ses!2sar",
+        "info": "La Casa del Puente, obra del arquitecto Amancio Williams, es sin dudas, un ícono arquitectónico de Mar del Plata, data de 1943-1945. Su estilo neogótico ha sido objeto de interés histórico y cultural debido a su diseño innovador. A lo largo de los años, la Casa del Puente ha sido preservada y restaurada, manteniendo su importancia como patrimonio arquitectónico de Mar del Plata. En la actualidad, continúa siendo un punto de interés para residentes y visitantes, atrayendo a aquellos interesados en la arquitectura y la historia. Su relevancia arquitectónica y su valor patrimonial la convierten en un sitio de importancia cultural.",
+        "gps": "-38.019825,-57.552883",
+        "foto":"image/jpeg;base64,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"
+    }
+]

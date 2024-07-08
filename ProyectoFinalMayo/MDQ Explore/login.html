@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDQ Explore</title>
+    <link rel="stylesheet" href="./CSS/estilos.css" />
+    <link rel="shortcut icon" href="./IMG/lobo copia.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+     <!-- Bootstrap CSS for modal -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <style>
+         body {
+             background-color: rgb(134, 111, 95);
+             /* Fondo marrón oscuro */
+             color: white;
+             /* Texto blanco */
+         }
+ 
+         .modal-content {
+             background-color: rgb(134, 111, 95);
+             /* Fondo marrón */
+             color: white;
+             /* Letra blanca */
+         }
+ 
+         .modal-header,
+         .modal-footer {
+             border: none;
+         }
+ 
+         .btn-primary {
+             background-color: rgb(134, 111, 95);
+             /* Botón marrón */
+             border-color: #8B4513;
+             /* Borde marrón */
+         }
+ 
+         .btn-primary:hover {
+             background-color: rgb(134, 111, 95);
+             /* Botón marrón oscuro al pasar el ratón */
+             border-color: #5E3010;
+             /* Borde marrón oscuro al pasar el ratón */
+         }
+ 
+         .btn-secondary {
+             background-color: rgb(134, 111, 95);
+             /* Botón marrón claro */
+             border-color: #8B4513;
+             /* Borde marrón claro */
+         }
+ 
+         .btn-secondary:hover {
+             background-color: rgb(134, 111, 95);
+             /* Botón marrón claro oscuro al pasar el ratón */
+             border-color: #8B4513;
+             /* Borde marrón claro oscuro al pasar el ratón */
+         }
+ 
+         h2,
+         label {
+             color: rgb(241, 238, 235);
+             /* Texto blanco */
+         }
+ 
+         input[type='text'],
+         input[type='password'],
+         input[type='submit'] {
+             border: 1px solid #8B4513;
+         }
+     </style>
+
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <form onsubmit="return validar();">
+            <h2>Bienvenido!!</h2>
+            <label for="usuario">Usuario:</label>
+            <input type='text' placeholder="Tu usuario" name='usuario' id='usuario' value="" /><br>
+            <div id="validar_usuario" style="color:red;">&nbsp;</div>
+                <div if id="validar_usuario = `graciela`">
+                    <form action="./reserva_administrador.html" >
+                </div>
+            <label for="clave">Clave: </label>
+            <input type='text' placeholder="Tu contraseña" name='clave' id='clave' value="" /><br>
+            <div id="validar_clave" style="color:red;">&nbsp; </div>
+            
+            <input type='submit' value='Enviar'></td>
+        </form>
+        <footer></footer>
+<!-- Modal para registro -->
+<div class="modal fade" id="registroModal" tabindex="-1" role="dialog" aria-labelledby="registroModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registroModalLabel">Registro de Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registroForm">
+                    <div class="form-group">
+                        <label for="registroUsuario">Usuario</label>
+                        <input type="text" class="form-control" id="registroUsuario" placeholder="Tu usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="registroClave">Clave</label>
+                        <input type="password" class="form-control" id="registroClave" placeholder="Tu contraseña">
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="registrarUsuario()">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para campos incompletos -->
+<div class="modal fade" id="incompletoModal" tabindex="-1" role="dialog" aria-labelledby="incompletoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="incompletoModalLabel">Campos Incompletos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Por favor completa todos los campos.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para error de usuario o clave -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="errorModalLabel">Error de Autenticación</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Usuario o clave incorrectos. Por favor intenta nuevamente.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para registro requerido -->
+<div class="modal fade" id="registroRequeridoModal" tabindex="-1" role="dialog" aria-labelledby="registroRequeridoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registroRequeridoModalLabel">Usuario No Registrado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                El usuario no está registrado o no habilitado para usar esta opcion. Por favor, regístrate para continuar.
+            </div>
+            <div class="modal-footer">
+                 <!--<button type="button" class="btn btn-primary" onclick="abrirRegistro()">Registrar</button>-->
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para registro exitoso -->
+<div class="modal fade" id="registroExitosoModal" tabindex="-1" role="dialog" aria-labelledby="registroExitosoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registroExitosoModalLabel">Registro Exitoso</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Usuario registrado exitosamente. Nos pondremos en contacto contigo.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./java/validar.js"></script>
+<script src="./java/HeaderFooter.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const usuariosRegistrados = {
+        'graciela': '1234567890' // Aquí puedes agregar más usuarios y contraseñas
+    };
+
+    function validar() {
+        const usuario = document.getElementById('usuario').value;
+        const clave = document.getElementById('clave').value;
+
+        if (!usuario || !clave) {
+            $('#incompletoModal').modal('show');
+            return false; // Evita que el formulario sea enviado
+        }
+
+        if (usuariosRegistrados[usuario] && usuariosRegistrados[usuario] === clave) {
+            window.location.href = './reserva_administrador.html';
+            return false; // Evita que el formulario sea enviado
+        } else if (!usuariosRegistrados[usuario]) {
+            $('#registroRequeridoModal').modal('show');
+            return false; // Evita que el formulario sea enviado
+        } else {
+            $('#errorModal').modal('show');
+            return false; // Evita que el formulario sea enviado
+        }
+    }
+
+    function registrarUsuario() {
+        const nuevoUsuario = document.getElementById('registroUsuario').value;
+        const nuevaClave = document.getElementById('registroClave').value;
+
+        if (nuevoUsuario && nuevaClave) {
+            usuariosRegistrados[nuevoUsuario] = nuevaClave;
+            $('#registroModal').modal('hide');
+            $('#registroExitosoModal').modal('show'); // Mostrar el modal de registro exitoso
+        } else {
+            alert('Por favor completa todos los campos.');
+        }
+    }
+
+    function abrirRegistro() {
+        $('#registroRequeridoModal').modal('hide');
+        $('#registroModal').modal('show');
+    }
+</script>
+</body>
+
+</html>

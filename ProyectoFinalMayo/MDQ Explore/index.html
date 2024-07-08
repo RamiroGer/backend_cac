@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Explora lo que Mar del Plata tiene para ofrecerte. Descubre sus lugares más emblemáticos y sus atracciones turísticas.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDQ Explore</title>
+    <link rel="shortcut icon" href="img/lobo copia.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+
+    <header>
+        <!-- Header genérico generado con script-->
+    </header>
+    <main>
+        <div id="div1">
+            <h1>Descubrí lo que Mar del Plata <br>Tiene para vos</h1>
+        </div>
+
+        <!-- Tarjetas de exploración con vue desde json con fetch-->
+        <div id="app" class="opciones">
+            <div v-for="reserva in reservas">
+                <div class="card">
+                    <img :src="reserva.foto" :alt="reserva.foto">
+                    <form id="card-content" action="./reserva.html">
+                        <h3>{{reserva.nombre}}</h3>
+                        <h3>${{reserva.precio}}</h3>
+                        <h3>{{reserva.dia}}</h3>
+                        <h3>{{reserva.hora}}</h3>
+                        <p class="card-text"><h3>{{reserva.descripcion}}</h3></p>
+                        <input type="hidden" name="reserva.foto" :value="reserva.id" />
+                        <input type="submit" :id="reserva.id" class="botonMasInfo" value="Contrata aqui excursion">
+                    </form>
+                </div>
+            </div>
+        </div>
+          <footer>
+            <!-- Pie de Página genérico generado con script-->
+          </footer>
+        
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./java/index.js"></script>
+        <script src="./java/HeaderFooter.js"></script>
+        <script src="./java/reserva.js"></script>
+        <script src="./java/reserva_administrador.js"></script>
+</body>
+
+</html>

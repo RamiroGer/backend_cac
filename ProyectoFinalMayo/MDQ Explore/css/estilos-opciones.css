@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+body {
+   background-color: rgb(134, 111, 95);
+}
+header {
+    background-color: rgb(54, 53, 53);
+    font-size: 14px;
+    padding: 7px 22px 7px 52px;
+    border-radius: 25px 25px 0px 0px;
+}
+#header {
+    display: grid;
+    grid-template-columns: 3fr 0.3fr 0.3fr 0.3fr 0.4fr;
+    grid-template-rows: 45px;
+    align-items:center;
+}
+main{
+    text-align: center;
+    background-color: rgb(134, 111, 95);
+}
+main img {
+    width: 500px;
+    float: left; margin-right: 15px; 
+}
+form{
+    border: 2px solid rgb(237, 118, 20);
+    border-radius: 15px;
+    /* color: black; */
+}
+header a:hover,
+footer a:hover {
+    color: rgb(237, 118, 20);
+}
+#reserva {
+    background-color: rgb(238, 224, 215);
+    /* color: black; */
+}
+label, select, input, option{
+    color: black;
+    margin: 10px;
+}
+p {
+    padding-bottom: 30px;
+}
+h3 {
+    font-size: 2em;
+}
+#div1 {
+    margin: 25px;
+    padding: 25px 50px;
+}
+footer {
+    background-color: rgb(54, 53, 53);
+    font-size: 18px;
+    padding: 5px 22px 5px 22px;
+    border-radius: 0px 0px 25px 25px;
+}
+#ultimo {
+    text-align: left;
+    margin-left: 45px;
+}
+#ultimo a {
+    padding-right: 35px;
+    text-decoration: none;
+}
+#ultimo img {
+    height: 25px;
+}
+#derechos{
+    text-align: center;
+    padding-bottom: 5px;
+}

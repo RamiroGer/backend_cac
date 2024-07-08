@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDQ Explore</title>
+    <link rel="stylesheet" href="./CSS/estilos.css" />
+    <link rel="shortcut icon" href="./IMG/lobo copia.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(134, 111, 95);
+            color: white;
+        }
+        .modal-content {
+            background-color: rgb(134, 111, 95);
+            color: white;
+        }
+        .modal-header,
+        .modal-footer {
+            border: none;
+        }
+        .btn-primary {
+            background-color: rgb(134, 111, 95);
+            border-color: #8B4513;
+        }
+        .btn-primary:hover {
+            background-color: rgb(134, 111, 95);
+            border-color: #5E3010;
+        }
+        .btn-secondary {
+            background-color: rgb(134, 111, 95);
+            border-color: #8B4513;
+        }
+        .btn-secondary:hover {
+            background-color: rgb(134, 111, 95);
+            border-color: #8B4513;
+        }
+        h2,
+        label {
+            color: rgb(241, 238, 235);
+        }
+        input[type='text'],
+        input[type='password'],
+        input[type='submit'] {
+            border: 1px solid #8B4513;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Aquí puedes poner el contenido del navbar -->
+    </header>
+    <main>
+        <h3>Regístrate por primera vez y recibe nuestra información</h3>
+        <form id="registrationForm" onsubmit="return validar();">
+            <h2>Bienvenido!!</h2>
+            <label for="usuario">Usuario:</label>
+            <input type='text' placeholder="Tu usuario" name='usuario' id='usuario' value="" /><br>
+            <div id="validar_usuario" style="color:red;">&nbsp;</div>
+            <label for="clave">Clave: </label>
+            <input type='password' placeholder="Tu contraseña" name='clave' id='clave' value="" /><br>
+            <div id="validar_clave" style="color:red;">&nbsp; </div>
+            <input type='submit' value='Enviar'>
+        </form>
+    </main>
+
+    <!-- Modal de registro exitoso -->
+    <div class="modal fade" id="registroExitosoModal" tabindex="-1" role="dialog" aria-labelledby="registroExitosoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registroExitosoModalLabel">Registro Exitoso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    FELICITACIONES. <br>registro completo<br> Te enviamos informacion de proximas excursiones
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de campos incompletos -->
+    <div class="modal fade" id="camposIncompletosModal" tabindex="-1" role="dialog" aria-labelledby="camposIncompletosModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="camposIncompletosModalLabel">Campos Incompletos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ERROR. Por favor completa todos los campos.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de usuario ya registrado -->
+    <div class="modal fade" id="usuarioRegistradoModal" tabindex="-1" role="dialog" aria-labelledby="usuarioRegistradoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="usuarioRegistradoModalLabel">Usuario ya registrado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ERROR. El usuario y la clave ya están registrados. Por favor, inicie sesión en su cuenta existente.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Aquí puedes poner el contenido del footer -->
+        <div class="container">
+            <p class="text-center">&copy; 2024 MDQ Explore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!-- Link de VUE -->
+    <script src="./java/usuario_administrador.js"></script>
+    <script src="./java/HeaderFooter.js"></script>
+    <script>
+        function validar() {
+            var usuario = document.getElementById('usuario').value;
+            var clave = document.getElementById('clave').value;
+
+            if (usuario.trim() === '' || clave.trim() === '') {
+                $('#camposIncompletosModal').modal('show');
+                return false;
+            } else {
+                let nuevoUsuario = {
+                    usuario: usuario,
+                    clave: clave,
+                    rol: 1 // Asignar un rol por defecto, por ejemplo, 1 para usuario normal
+                };
+
+                fetch('https://gracielagarcia.pythonanywhere.com/usuarios', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(nuevoUsuario)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    $('#registroExitosoModal').modal('show');
+                    document.getElementById("registrationForm").reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    $('#usuarioRegistradoModal').modal('show');
+                });
+
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
